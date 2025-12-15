@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  position: relative;
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 80px 20px;
+  margin: 0 auto;
+
+  .firstView {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 80px;
+
+    .workingPicture {
+      position: relative;
+      object-fit: cover;
+      max-height: 500px;
+    }
+  }
+  .imageSection {
+    .image {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+
+  .servicesSection {
+    .servicesList {
+      display: block;
+      list-style: none;
+      padding: 0;
+      margin: 30px 0;
+      line-height: 30px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .nameMeaningSection {
+    .nameMeaningText {
+      line-height: 30px;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+  }
+
+  .shopInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 40px 20px 20px;
+    border-radius: 8px;
+    background-color: var(--color-secondary);
+
+    .addressSection {
+      .addressText {
+        margin-bottom: 30px;
+      }
+    }
+
+    .contactSection {
+      flex-grow: 1;
+
+      .contactForm {
+        .formGroup {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+
+          label {
+            margin-bottom: 10px;
+          }
+
+          input,
+          textarea {
+            padding: 10px;
+            border: 1px solid var(--color-accent);
+            border-radius: 4px;
+            font-size: 1rem;
+          }
+
+          textarea {
+            resize: vertical;
+            min-height: 100px;
+          }
+        }
+
+        .submitButton {
+          padding: 10px 20px;
+          display: block;
+          margin: 0 0 0 auto;
+          background-color: var(--color-accent);
+          color: var(--color-primary);
+          border: none;
+          border-radius: 4px;
+          font-size: 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .container {
+    padding: 80px;
+
+    .shopInfoContainer {
+      flex-direction: row;
+      padding: 80px 40px 40px;
+    }
+  }
+}
